@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anitha Sri M – Web Development Intern & Computer Science Student</title>
+<meta name="description" content="Portfolio of Anitha Sri M, a Computer Science & Engineering student at PPG Institute of Technology, Coimbatore, with web development internship experience in HTML, CSS and JavaScript.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8f3;--surface:#fff;--ink:#18271e;--muted:#52635a;--line:#d9e2d6;--green:#2f5d3a;--leaf:#7fae52;--rose:#e9a3a0;--rose-soft:#fbe6e4;--on-green:#fff;color-scheme:light;
+--serif:'Fraunces',Georgia,serif;--sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101a14;--surface:#172620;--ink:#eaf1e6;--muted:#a3b5a8;--line:#27392e;--green:#8fc46a;--leaf:#8fc46a;--rose:#e9a3a0;--rose-soft:#2c2021;--on-green:#101a14;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101a14;--surface:#172620;--ink:#eaf1e6;--muted:#a3b5a8;--line:#27392e;--green:#8fc46a;--leaf:#8fc46a;--rose:#e9a3a0;--rose-soft:#2c2021;--on-green:#101a14;color-scheme:dark}
+*{box-sizing:border-box}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font:700 1.2rem var(--serif);text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+.tools{display:flex;gap:8px}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:grid;place-items:center;font-size:1.1rem}
+#menu{display:none}
+@media(max-width:760px){#menu{display:grid}nav{position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);display:none}nav.open{display:block}nav ul{flex-direction:column;gap:0;padding:8px 22px 16px}nav a{display:block;padding:12px 0;font-size:1.05rem}}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding:56px 0 72px}
+.hero h1{font:700 clamp(2.8rem,8vw,5.2rem)/1 var(--serif);margin:0 0 18px;letter-spacing:-.02em;animation:rise .8s both}
+.role{font-size:1.2rem;color:var(--green);font-weight:600;margin:0 0 14px}
+.lead{max-width:34rem;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--green)}
+.btn.p{background:var(--green);color:var(--on-green)}
+.btn.s{color:var(--green)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .2s}
+.photo{position:relative;justify-self:center;width:min(100%,360px)}
+.photo::before{content:"";position:absolute;inset:18px -14px -14px 18px;border-radius:999px 999px 28px 28px;background:var(--rose-soft);border:2px solid var(--rose)}
+.photo img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:999px 999px 28px 28px}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+section{padding:68px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,4vw,2.5rem)/1.15 var(--serif);margin:0 0 28px;letter-spacing:-.01em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+p{margin:0 0 14px;max-width:62ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0}
+.chips li{padding:10px 18px;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-weight:500}
+.group{margin-bottom:26px}
+.group h3{font:600 1.05rem var(--sans);color:var(--muted);margin:0 0 12px}
+.tl{border-left:3px solid var(--leaf);padding-left:26px;position:relative}
+.tl::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--rose);border:3px solid var(--bg)}
+.tl h3{font:700 1.4rem var(--serif);margin:0}
+.meta{color:var(--muted);margin:2px 0 14px}
+.tl ul{padding-left:20px;margin:0;max-width:62ch}
+.tl li{margin-bottom:8px}
+.glass{background:color-mix(in srgb,var(--surface) 75%,transparent);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:20px;padding:26px}
+.stat{font:700 2.6rem/1 var(--serif);color:var(--green);margin:0 0 6px}
+.contact{display:grid;gap:14px;max-width:520px}
+.contact a{display:flex;align-items:center;gap:14px;padding:16px 20px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-decoration:none;font-weight:500;transition:border-color .2s}
+.contact a:hover{border-color:var(--green)}
+footer{padding:30px 0 50px;color:var(--muted);border-top:1px solid var(--line);font-size:.92rem}
+#top{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));opacity:0;pointer-events:none;transition:opacity .25s;z-index:15}
+#top.show{opacity:1;pointer-events:auto}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px}.photo{order:-1;width:min(78%,300px)}.two{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style></head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#home">Anitha Sri M</a>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#activities">Activities</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<div class="tools"><button class="ib" id="theme" aria-label="Switch to dark theme">☾</button><button class="ib" id="menu" aria-label="Open menu" aria-expanded="false">☰</button></div>
+</div></header>
+
+<main id="home">
+<div class="wrap hero">
+<div>
+<h1>Anitha Sri M</h1>
+<p class="role">Computer Science student · Web development intern</p>
+<p class="lead">I’m a Computer Science & Engineering student in Coimbatore who builds web pages with HTML, CSS and JavaScript. I’m looking for an internship where I can keep learning and put in the work.</p>
+<div class="btns"><a class="btn p" href="#contact">Contact me</a><a class="btn s" href="resume/Anitha_SriM_Resume.pdf" download>Download resume</a></div>
+</div>
+<div class="photo"><img src="images/anitha.jpg" alt="Portrait of Anitha Sri M standing in front of green palm leaves" width="520" height="650"></div>
+</div>
+
+<section id="about"><div class="wrap rv">
+<h2>About me</h2>
+<div class="two">
+<div>
+<p>I’m studying B.E. Computer Science & Engineering at PPG Institute of Technology, Coimbatore. In late 2025 I completed a web development internship at Elysium, where I learned how a web page goes from an idea to something people can open and use.</p>
+<p>I’m aiming for a paid role that builds on that internship, and I’m ready to work hard for the chance.</p>
+</div>
+<div class="glass"><p class="stat">4</p><p style="margin:0">workshops attended so far, alongside college events and games.</p></div>
+</div>
+</div></section>
+
+<section id="skills"><div class="wrap rv">
+<h2>Skills</h2>
+<div class="group"><h3>Web development</h3><ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Web page design</li></ul></div>
+<div class="group"><h3>Media in web pages</h3><ul class="chips"><li>Video</li><li>Photo</li><li>Audio</li></ul></div>
+</div></section>
+
+<section id="experience"><div class="wrap rv">
+<h2>Experience</h2>
+<div class="tl">
+<h3>Web Development Intern</h3>
+<p class="meta">Elysium, Coimbatore · Nov 2025 – Dec 2025</p>
+<ul>
+<li>Learned HTML, CSS and JavaScript.</li>
+<li>Designed web pages with built-in video, photo and audio media.</li>
+<li>Learned the full web development process.</li>
+</ul>
+</div>
+</div></section>
+
+<section id="education"><div class="wrap rv">
+<h2>Education</h2>
+<div class="tl">
+<h3>Bachelor of Engineering (B.E.), Computer Science & Engineering</h3>
+<p class="meta">PPG Institute of Technology · 2024 – 2028</p>
+</div>
+</div></section>
+
+<section id="activities"><div class="wrap rv">
+<h2>Activities & workshops</h2>
+<ul class="chips"><li>College participation events</li><li>Various games</li><li>Four workshops attended</li></ul>
+</div></section>
+
+<section id="contact"><div class="wrap rv">
+<h2>Let’s talk</h2>
+<p>I’d love to hear about internship and entry-level opportunities. Send me an email or give me a call.</p>
+<div class="contact">
+<a href="mailto:anithasrimohanraj@gmail.com">✉ anithasrimohanraj@gmail.com</a>
+<a href="tel:+918903647104">☎ +91 89036 47104</a>
+<a href="https://www.google.com/maps/search/Coimbatore" target="_blank" rel="noopener">⌖ Coimbatore, India</a>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Anitha Sri M</div></footer>
+<button class="ib" id="top" aria-label="Back to top">↑</button>
+<script>
+(function(){
+var r=document.documentElement,tb=document.getElementById('theme');
+function dark(){var t=r.getAttribute('data-theme');return t?t==='dark':matchMedia('(prefers-color-scheme:dark)').matches}
+function sync(){var d=dark();tb.textContent=d?'☀':'☾';tb.setAttribute('aria-label',d?'Switch to light theme':'Switch to dark theme')}
+try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s)}catch(e){}
+sync();
+tb.onclick=function(){var n=dark()?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('theme',n)}catch(e){}sync()};
+var nav=document.getElementById('nav'),m=document.getElementById('menu');
+m.onclick=function(){var o=nav.classList.toggle('open');m.setAttribute('aria-expanded',o);m.setAttribute('aria-label',o?'Close menu':'Open menu')};
+nav.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');m.setAttribute('aria-expanded','false')}});
+var top=document.getElementById('top');
+top.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+addEventListener('scroll',function(){top.classList.toggle('show',scrollY>500)},{passive:true});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body></html>
